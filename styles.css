@@ -1,0 +1,111 @@
+/* ====== ESTILOS PRINCIPALES — TEMA “ORO Y MÁRMOL” ====== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 16px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background-color: #121212; /* Negro carbón */
+  color: #86acb3; /* Blanco humo */
+}
+
+/* TITULOS */
+h1 {
+  color: #C9A13F; /* Dorado metálico */
+  border-bottom: 4px solid currentColor;
+}
+
+h2 {
+  color: #E0C97F; /* Dorado más claro */
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #DADADA; /* Gris claro para texto */
+}
+
+li {
+  color: #E0C97F;
+}
+
+th {
+  color: #C9A13F;
+}
+
+td {
+  color: #a3aadd;
+}
+
+/* ENLACES */
+a {
+  color: #E0C97F;
+  border-bottom: 2px solid currentColor;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover {
+  color: #F5E6A1; /* Dorado brillante */
+  border-color: #F5E6A1;
+}
+
+/* Imagenes */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* ====== BOTÓN FLOTANTE WHATSAPP ====== */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366; /* Verde WhatsApp (neutral permitido) */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+  z-index: 1055;
+  text-decoration: none;
+  transition: transform .2s ease, background-color .2s ease, opacity .2s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  pointer-events: none;
+}
+
+/* Estado visible */
+.whatsapp-float.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Hover/focus: efecto de ampliación */
+.whatsapp-float:hover,
+.whatsapp-float:focus {
+  background-color: #20b954;
+  transform: scale(1.08);
+  outline: none;
+}
+
+/* ====== AJUSTES RESPONSIVOS ====== */
+@media (max-width: 575.98px) {
+  footer {
+    padding-bottom: 84px;
+  }
+}
+
+/* ====== ACCESIBILIDAD ====== */
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float {
+    transition: none;
+  }
+}
